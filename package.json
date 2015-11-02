@@ -4,7 +4,7 @@
   "description": "A parser for logic search string",
   "main": "lib/index.js",
   "scripts": {
-    "build": "browserify --standalone logic-query-parser --bare lib/index.js > index.js",
+    "build": "browserify lib/index.js --standalone logic-query-parser > index.js",
     "prepublish": "npm run build",
     "test": "NODE_ENV=test mocha -R spec -t 60000 test/"
   },
