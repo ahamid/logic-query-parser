@@ -1,7 +1,7 @@
 {
   "name": "logic-query-parser",
   "description": "A parser for logic search string",
-  "main": "index.js",
+  "main": "./index.js",
   "authors": [
     "Quentin Buathier <quentin.buathier@epitech.eu>"
   ],
