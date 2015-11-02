@@ -1,0 +1,25 @@
+{
+  "name": "logic-query-parser",
+  "description": "A parser for logic search string",
+  "main": "index.js",
+  "authors": [
+    "Quentin Buathier <quentin.buathier@epitech.eu>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "logic",
+    "query",
+    "parser",
+    "search"
+  ],
+  "homepage": "https://github.com/ahamid/logic-query-parser",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
