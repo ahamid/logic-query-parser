@@ -957,4 +957,56 @@ module.exports = [
     string: '()',
     err: 'Empty block'
   },
+
+  {
+    string: 'welcome AND NOT bye',
+
+    // TREE
+    tree: {
+      lexeme: {
+        type: 'and'
+      },
+      left: {
+        lexeme: {
+          type: 'string',
+          value: 'welcome'
+        },
+        left: null,
+        right: null
+      },
+      right: {
+        lexeme: {
+          type: 'not',
+        },
+        left: {
+          lexeme: {
+            type: 'string',
+            value: 'bye'
+          }
+        },
+        right: null
+      }
+    },
+
+    // QUERY
+    query: {
+      type: "and",
+      values: [
+        {
+          type: "string",
+          value: "welcome"
+        },
+        {
+          type: 'not',
+          values: [
+            {
+              type: "string",
+              value: "bye"
+            }
+          ]
+        }
+      ]
+    }
+  },
+
 ];

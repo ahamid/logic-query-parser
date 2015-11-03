@@ -2,6 +2,15 @@ var lexerHelper = require('../lib/helpers/lexer.js');
 var syntaxerHelper = require('../lib/helpers/syntaxer.js');
 var postHelper = require('../lib/helpers/post.js');
 
+var notLexeme = {
+  regexp: 'not(\\s|\\(|\\)|"|$)',
+  escaped: true,
+  modifiers: 'i',
+  lexer: lexerHelper.generateCutLexer('not', 3),
+  syntaxer: syntaxerHelper.notSyntaxer,
+  priority: 6
+};
+
 var andLexeme = {
   regexp: 'and(\\s|\\(|\\)|"|$)',
   escaped: true,
@@ -46,6 +55,7 @@ var stringLexeme = {
 };
 
 module.exports = {
+  not: notLexeme,
   and: andLexeme,
   or: orLexeme,
   startBlock: startBlockLexeme,

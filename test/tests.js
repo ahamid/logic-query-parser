@@ -17,6 +17,7 @@ describe('Tests binaryTree', function() {
     func('should ' + (test.err ? 'fail' : 'work') + ' for test ' + count + ' : ' + test.string, function(done) {
       try {
         var tree = parser.parse(test.string);
+        console.log('tree', JSON.stringify(tree, null, 2));
 
         if(test.tree) {
           tree.should.eql(test.tree);
